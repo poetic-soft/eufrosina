@@ -1,0 +1,11 @@
+{
+  "name": "eufrosina.blog",
+  "private": true,
+  "scripts": {
+    "css": "node scripts/build-css.mjs",
+    "css:watch": "node --experimental-require-module ./node_modules/sass/sass.js --watch src/scss/main.scss:www/assets/css/main.css --style=expanded --embed-sources"
+  },
+  "devDependencies": {
+    "sass": "^1.103.1"
+  }
+}

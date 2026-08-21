@@ -1,0 +1,113 @@
+@use "mixins" as *;
+
+.piece-list {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+
+  li + li {
+    margin-top: 1.75rem;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  h2 {
+    margin: 0 0 0.35rem;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+    text-decoration-color: color-mix(in srgb, var(--accent) 42%, transparent);
+
+    &::after {
+      content: " →";
+      font-weight: 400;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.02rem;
+    line-height: 1.5;
+  }
+
+  a:hover h2,
+  a:focus-visible h2 {
+    text-decoration-color: var(--accent);
+  }
+}
+
+.versions {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 0 0 2rem;
+  font-size: 1.02rem;
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+    text-decoration-color: color-mix(in srgb, var(--accent) 42%, transparent);
+
+    &:hover,
+    &:focus-visible {
+      text-decoration-color: var(--accent);
+    }
+
+    &[aria-current="page"] {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 0.28em;
+      text-decoration-thickness: 1px;
+    }
+  }
+}
+
+.pieza-foto {
+  margin: 0 0 2rem;
+
+  a {
+    display: block;
+    cursor: zoom-in;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  a:hover {
+    opacity: 0.88;
+  }
+}
+
+.cuerpo {
+  font-size: 1.14rem;
+  line-height: 1.85;
+
+  h1:first-child {
+    margin-top: 0;
+    margin-bottom: 0.85em;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  p {
+    margin: 0 0 1.1em;
+  }
+
+  &.version-original p {
+    font-variant-numeric: normal;
+  }
+}

@@ -1,0 +1,101 @@
+@use "mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 0 0 0.6rem;
+  font-size: 2.35rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 1.28rem;
+  font-weight: 500;
+  margin: 1.5rem 0 0.5rem;
+}
+
+h3 {
+  font-size: 1.08rem;
+  font-weight: 500;
+  margin: 1.25rem 0 0.4rem;
+}
+
+p {
+  color: var(--ink);
+  line-height: 1.8;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+button {
+  margin-top: 1rem;
+  background: var(--accent);
+  color: var(--white);
+  border: 0;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+
+  th,
+  td {
+    text-align: left;
+    padding: 0.55rem 0.4rem;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.95rem;
+  }
+
+  th {
+    color: var(--muted);
+    font-weight: 600;
+  }
+}
+
+.lede {
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin: 0 0 2rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.panel {
+  padding: 0;
+}
+
+.ok {
+  color: var(--ok);
+  font-weight: 700;
+}
+
+.ko {
+  color: var(--ko);
+  font-weight: 700;
+}

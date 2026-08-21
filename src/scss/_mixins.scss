@@ -1,0 +1,14 @@
+@mixin ui-font {
+  font-family: var(--font-ui);
+}
+
+@mixin panel {
+  background: transparent;
+  border: 0;
+}
+
+@mixin hover-border {
+  &:hover {
+    color: var(--accent);
+  }
+}
