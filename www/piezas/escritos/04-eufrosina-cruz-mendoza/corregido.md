@@ -5,9 +5,11 @@ imagen: imagen.jpg
 orden: 4
 ---
 
-# Eufrosina Cruz Mendoza
+# Otra Eufrosina
 
-Cuando era pequeña, recibió una de las lecciones más importantes de su vida: hacer de su rebeldía innata una herramienta para fomentar cambios y derribar paradigmas. Su infancia transcurrió en la sierra sur oaxaqueña, un paisaje en el que, debido a su altitud, las nubes se confunden con la tierra. Ese entorno mágico, pero a la vez castigado por diversas agravantes que imperan en las comunidades indígenas de México, como es la falta de oportunidades, fue el testigo que vio crecer la inquietud de Eufrosina y saber qué hay más allá de ese cúmulo de nubes.
+## Eufrosina Cruz Mendoza
+
+Cuando era pequeña, Eufrosina Cruz Mendoza recibió una de las lecciones más importantes de su vida: hacer de su rebeldía innata una herramienta para fomentar cambios y derribar paradigmas. Su infancia transcurrió en la sierra sur oaxaqueña, un paisaje en el que, debido a su altitud, las nubes se confunden con la tierra. Ese entorno mágico, pero a la vez castigado por diversas agravantes que imperan en las comunidades indígenas de México, como es la falta de oportunidades, fue el testigo que vio crecer la inquietud de Eufrosina y saber qué hay más allá de ese cúmulo de nubes.
 
 Eufrosina es una mujer zapoteca nacida en el municipio de Santa María Quiegolani, en la sierra sur oaxaqueña; tiene nueve hermanos.
 

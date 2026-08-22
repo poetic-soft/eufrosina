@@ -4,8 +4,10 @@
 /** @var string $coleccion */
 /** @var list<Eufrosina\Piece> $piezas */
 ?>
-<h1><?= htmlspecialchars($heading, ENT_QUOTES, 'UTF-8') ?></h1>
-<p class="lede"><?= htmlspecialchars($lede, ENT_QUOTES, 'UTF-8') ?></p>
+<header class="archive-head">
+    <h1><?= htmlspecialchars($heading, ENT_QUOTES, 'UTF-8') ?></h1>
+    <p class="lede"><?= htmlspecialchars($lede, ENT_QUOTES, 'UTF-8') ?></p>
+</header>
 
 <?php if ($piezas === []): ?>
     <p class="muted">Todavía no hay piezas en esta caja.</p>

@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  color-scheme: light dark;
+}
+
 body {
   margin: 0;
   font-family: var(--font-serif);
@@ -13,15 +17,29 @@ body {
   font-weight: 400;
   color: var(--ink);
   background: var(--bg);
-  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--accent);
 }
 
 h1 {
   margin: 0 0 0.6rem;
-  font-size: 2.35rem;
+  font-size: clamp(2.1rem, 4.2vw, 3.35rem);
   font-weight: 500;
   letter-spacing: 0.01em;
-  line-height: 1.15;
+  line-height: 1.12;
 }
 
 h2 {
@@ -49,11 +67,24 @@ code {
 button {
   margin-top: 1rem;
   background: var(--accent);
-  color: var(--white);
+  color: var(--bg);
   border: 0;
-  padding: 0.65rem 1rem;
+  border-radius: var(--radius);
+  padding: 0.65rem 1.1rem;
   cursor: pointer;
   font: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus-visible {
+    filter: brightness(1.06);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
 }
 
 table {
@@ -78,8 +109,9 @@ table {
 .lede {
   color: var(--muted);
   font-size: 1.2rem;
-  line-height: 1.2;
-  margin: 0 0 2rem;
+  line-height: 1.35;
+  margin: 0 0 1.75rem;
+  max-width: 38rem;
 }
 
 .muted {
@@ -98,4 +130,41 @@ table {
 .ko {
   color: var(--ko);
   font-weight: 700;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: var(--z-skip);
+  background: var(--ink);
+  color: var(--bg);
+  padding: 0.5rem 0.85rem;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:focus {
+    top: 0.75rem;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }

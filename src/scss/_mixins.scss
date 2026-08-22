@@ -2,13 +2,33 @@
   font-family: var(--font-ui);
 }
 
-@mixin panel {
-  background: transparent;
-  border: 0;
+@mixin ink-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--accent) 42%, transparent);
+
+  &:hover,
+  &:focus-visible {
+    text-decoration-color: var(--accent);
+  }
 }
 
-@mixin hover-border {
-  &:hover {
-    color: var(--accent);
+@mixin measure {
+  max-width: var(--measure);
+  margin-inline: auto;
+  width: 100%;
+}
+
+@mixin shell {
+  max-width: var(--shell-width);
+  margin-inline: auto;
+  width: 100%;
+}
+
+@mixin rise {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: rise 0.75s var(--ease) both;
   }
 }

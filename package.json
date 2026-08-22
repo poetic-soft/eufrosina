@@ -6,6 +6,7 @@
     "css:watch": "node --experimental-require-module ./node_modules/sass/sass.js --watch src/scss/main.scss:www/assets/css/main.css --style=expanded --embed-sources"
   },
   "devDependencies": {
+    "@fontsource/alegreya": "^5.3.0",
     "sass": "^1.103.1"
   }
 }

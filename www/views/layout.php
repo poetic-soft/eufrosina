@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#e4e7e1" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1b201c" media="(prefers-color-scheme: dark)">
     <title><?= htmlspecialchars($title ?? 'Eufrosina', ENT_QUOTES, 'UTF-8') ?></title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= htmlspecialchars($cssHref ?? '/assets/css/main.css', ENT_QUOTES, 'UTF-8') ?>">
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
 </head>
@@ -15,6 +15,7 @@
     hx-target="#page"
     hx-swap="innerHTML"
     hx-push-url="true">
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <div id="page">
         <?= $content ?>
     </div>

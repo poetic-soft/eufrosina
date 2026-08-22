@@ -1,43 +1,26 @@
-.home-intro {
-  font-size: 1.18rem;
+@use "mixins" as *;
 
-  p {
-    margin: 0 0 1.15em;
-  }
+.home-hero {
+  @include rise;
+  padding-top: 0.5rem;
+}
 
-  a {
-    color: var(--accent);
-    text-decoration: underline;
-    text-underline-offset: 0.22em;
-    text-decoration-thickness: 1px;
-    text-decoration-color: color-mix(in srgb, var(--accent) 42%, transparent);
+.home-hero h1 {
+  max-width: 12ch;
+}
 
-    &:hover,
-    &:focus-visible {
-      text-decoration-color: var(--accent);
-    }
-  }
-
-  &::after {
-    content: "· · ·";
-    display: block;
-    text-align: center;
-    letter-spacing: 0.45em;
-    color: var(--muted);
-    margin: 2.4rem 0 0;
-    font-size: 0.95rem;
-  }
+.home-hero .lede {
+  margin-bottom: 2rem;
 }
 
 .home-doors {
   display: grid;
-  gap: 2.25rem;
-  margin-top: 2.4rem;
-  text-align: center;
+  gap: 1.6rem;
 
   @media (min-width: 640px) {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 1.5rem 2.5rem;
+    align-items: end;
   }
 }
 
@@ -45,24 +28,16 @@
   display: block;
   text-decoration: none;
   color: inherit;
+  padding-top: 0.2rem;
+  border-top: 1px solid var(--line);
+  transition: transform 0.3s var(--ease);
 
   strong {
+    @include ink-link;
     display: inline;
-    color: var(--accent);
-    font-family: var(--font-serif);
-    font-size: 1.35rem;
+    font-size: 1.45rem;
     font-weight: 500;
-    letter-spacing: 0.02em;
-    text-transform: none;
-    text-decoration: underline;
-    text-underline-offset: 0.22em;
-    text-decoration-thickness: 1px;
-    text-decoration-color: color-mix(in srgb, var(--accent) 42%, transparent);
-
-    &::after {
-      content: " →";
-      font-weight: 400;
-    }
+    letter-spacing: 0.01em;
   }
 
   span {
@@ -73,13 +48,29 @@
   }
 
   .count {
-    color: var(--muted);
     font-size: 0.92rem;
     margin: 0.35rem 0 0.4rem;
   }
 
-  &:hover strong,
-  &:focus-visible strong {
-    text-decoration-color: var(--accent);
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.home-intro {
+  margin-top: 3.5rem;
+  font-size: 1.16rem;
+
+  p {
+    margin: 0 0 1.15em;
+  }
+
+  a {
+    @include ink-link;
   }
 }

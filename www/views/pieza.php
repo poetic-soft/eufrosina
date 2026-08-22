@@ -6,6 +6,7 @@
 $coleccionLabel = $pieza->coleccion === 'diario' ? 'Diario' : 'Escritos';
 $backHref = '/' . htmlspecialchars($pieza->coleccion, ENT_QUOTES, 'UTF-8');
 $backLabel = htmlspecialchars($coleccionLabel, ENT_QUOTES, 'UTF-8');
+$showFoto = $version === 'original' && $pieza->imageUrl() !== null;
 ?>
 <a class="back" href="<?= $backHref ?>">← <?= $backLabel ?></a>
 
@@ -18,7 +19,8 @@ $backLabel = htmlspecialchars($coleccionLabel, ENT_QUOTES, 'UTF-8');
     <?php endforeach; ?>
 </nav>
 
-<?php if ($version === 'original' && $pieza->imageUrl() !== null): ?>
+<?php if ($showFoto): ?>
+<div class="pieza-layout">
 <figure class="pieza-foto">
     <a
         href="<?= htmlspecialchars($pieza->imageUrl(), ENT_QUOTES, 'UTF-8') ?>"
@@ -30,6 +32,9 @@ $backLabel = htmlspecialchars($coleccionLabel, ENT_QUOTES, 'UTF-8');
         <img
             src="<?= htmlspecialchars($pieza->imageUrl(), ENT_QUOTES, 'UTF-8') ?>"
             alt="Facsímil de <?= htmlspecialchars($pieza->title, ENT_QUOTES, 'UTF-8') ?>"
+            width="374"
+            height="512"
+            decoding="async"
         >
     </a>
 </figure>
@@ -38,5 +43,9 @@ $backLabel = htmlspecialchars($coleccionLabel, ENT_QUOTES, 'UTF-8');
 <article class="cuerpo version-<?= htmlspecialchars($version, ENT_QUOTES, 'UTF-8') ?>">
     <?= $cuerpo ?>
 </article>
+
+<?php if ($showFoto): ?>
+</div>
+<?php endif; ?>
 
 <a class="back" href="<?= $backHref ?>">← <?= $backLabel ?></a>
