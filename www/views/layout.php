@@ -9,6 +9,7 @@
     <title><?= htmlspecialchars($title ?? 'Eufrosina', ENT_QUOTES, 'UTF-8') ?></title>
     <link rel="stylesheet" href="<?= htmlspecialchars($cssHref ?? '/assets/css/main.css', ENT_QUOTES, 'UTF-8') ?>">
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="<?= htmlspecialchars($jsHref ?? '/assets/js/gallery.js', ENT_QUOTES, 'UTF-8') ?>" defer></script>
 </head>
 <body
     hx-boost="true"

@@ -11,6 +11,7 @@ final class Eufrosina
     private View $view;
     private Router $router;
     private Archive $archive;
+    private Media $media;
     private string $basePath;
 
     private function __construct(string $basePath)
@@ -19,7 +20,13 @@ final class Eufrosina
         $this->request = new Request();
         $this->cache = new Cache($basePath . '/storage/cache');
         $this->archive = new Archive($basePath . '/piezas', $this->cache);
-        $this->view = new View($this->request, $basePath . '/views', cssHref: self::cssHref($basePath));
+        $this->media = new Media($basePath . '/assets');
+        $this->view = new View(
+            $this->request,
+            $basePath . '/views',
+            cssHref: self::assetHref($basePath, '/assets/css/main.css'),
+            jsHref: self::assetHref($basePath, '/assets/js/gallery.js'),
+        );
         $this->router = new Router($this->request, $this->view);
         $this->registerRoutes();
     }
@@ -44,10 +51,9 @@ final class Eufrosina
         return $this->request;
     }
 
-    private static function cssHref(string $basePath): string
+    private static function assetHref(string $basePath, string $href): string
     {
-        $file = $basePath . '/assets/css/main.css';
-        $href = '/assets/css/main.css';
+        $file = $basePath . $href;
 
         if (is_file($file)) {
             $href .= '?v=' . filemtime($file);
@@ -64,6 +70,8 @@ final class Eufrosina
                 'section' => 'home',
                 'nEscritos' => $this->archive->count('escritos'),
                 'nDiario' => $this->archive->count('diario'),
+                'heroImages' => $this->media->hero(),
+                'galleries' => $this->media->galleries(),
             ]];
         });
 

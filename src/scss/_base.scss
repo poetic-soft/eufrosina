@@ -13,7 +13,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: 1.12rem;
+  font-size: 1.01rem;
   font-weight: 400;
   color: var(--ink);
   background: var(--bg);
@@ -35,21 +35,21 @@ a {
 }
 
 h1 {
-  margin: 0 0 0.6rem;
-  font-size: clamp(2.1rem, 4.2vw, 3.35rem);
+  margin: 0 0 0.2rem;
+  font-size: clamp(1.89rem, 3.78vw, 3.02rem);
   font-weight: 500;
   letter-spacing: 0.01em;
   line-height: 1.12;
 }
 
 h2 {
-  font-size: 1.28rem;
+  font-size: 1.15rem;
   font-weight: 500;
   margin: 1.5rem 0 0.5rem;
 }
 
 h3 {
-  font-size: 1.08rem;
+  font-size: 0.97rem;
   font-weight: 500;
   margin: 1.25rem 0 0.4rem;
 }
@@ -97,7 +97,7 @@ table {
     text-align: left;
     padding: 0.55rem 0.4rem;
     border-bottom: 1px solid var(--line);
-    font-size: 0.95rem;
+    font-size: 0.86rem;
   }
 
   th {
@@ -108,7 +108,7 @@ table {
 
 .lede {
   color: var(--muted);
-  font-size: 1.2rem;
+  font-size: 1.08rem;
   line-height: 1.35;
   margin: 0 0 1.75rem;
   max-width: 38rem;

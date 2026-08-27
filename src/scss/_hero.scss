@@ -1,0 +1,77 @@
+@use "mixins" as *;
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  isolation: isolate;
+  background: var(--paper);
+  color: #f3f5f1;
+}
+
+.hero__bg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: var(--z-base);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  padding-bottom: 24%;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent 20%,
+    var(--accent-hard) 100%
+  );
+}
+
+.hero__copy {
+  @include rise;
+  position: absolute;
+  padding: 0 1.25rem 1rem;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
+}
+
+.hero h1 {
+  color: #f3f5f1;
+  max-width: 12ch;
+  line-height: 1;
+  text-shadow: 0 1px 18px rgb(27 32 28 / 0.35);
+}
+
+.hero .lede {
+  color: color-mix(in srgb, #f3f5f1 82%, transparent);
+  margin: 0;
+  line-height: 1;
+  max-width: 22rem;
+}
+
+.hero--plain {
+  min-height: 0;
+  background: transparent;
+  color: var(--ink);
+  margin-top: 0;
+
+  &::after {
+    content: none;
+  }
+
+  h1,
+  .lede {
+    color: inherit;
+    text-shadow: none;
+  }
+
+  .lede {
+    color: var(--muted);
+  }
+}

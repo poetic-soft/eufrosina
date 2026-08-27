@@ -2,11 +2,15 @@
   "name": "eufrosina.blog",
   "private": true,
   "scripts": {
-    "css": "node scripts/build-css.mjs",
-    "css:watch": "node --experimental-require-module ./node_modules/sass/sass.js --watch src/scss/main.scss:www/assets/css/main.css --style=expanded --embed-sources"
+    "css": "node scripts/build-css.mjs && node scripts/sftp-sync.mjs www/assets/css/main.css www/assets/css/main.css.map",
+    "css:watch": "node --experimental-require-module ./node_modules/sass/sass.js --watch src/scss/main.scss:www/assets/css/main.css --style=expanded --embed-sources",
+    "sftp:check": "node scripts/sftp-sync.mjs --check",
+    "sftp:watch": "node scripts/sftp-sync.mjs --watch"
   },
   "devDependencies": {
     "@fontsource/alegreya": "^5.3.0",
-    "sass": "^1.103.1"
+    "chokidar": "^5.0.0",
+    "sass": "^1.103.1",
+    "ssh2-sftp-client": "^12.1.1"
   }
 }

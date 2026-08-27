@@ -7,7 +7,7 @@
 }
 
 .site-nav {
-  @include shell;
+  @include measure;
   position: sticky;
   top: 0;
   z-index: var(--z-nav);
@@ -22,7 +22,7 @@
   box-shadow: 0 1px 0 var(--line);
 
   .brand {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.04em;
     color: var(--ink);
@@ -34,7 +34,7 @@
     color: var(--muted);
     text-decoration: none;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.9rem;
     white-space: nowrap;
   }
 }
@@ -71,7 +71,7 @@
 main {
   @include measure;
   flex: 1;
-  padding: 2rem 1.25rem 4.5rem;
+  padding: 1.4rem 1.25rem 4.5rem;
 }
 
 .frame:has(.pieza-layout) main {
@@ -82,7 +82,7 @@ main {
   @include measure;
   padding: 0 1.25rem 2.25rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.86rem;
   text-align: left;
 }
 
@@ -94,7 +94,7 @@ main {
   @include ink-link;
   display: inline-block;
   margin-bottom: 1.5rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .cuerpo + .back,

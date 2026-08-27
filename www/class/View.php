@@ -11,6 +11,7 @@ final class View
         private readonly string $viewsPath,
         private readonly string $layout = 'layout.php',
         private readonly string $cssHref = '/assets/css/main.css',
+        private readonly string $jsHref = '/assets/js/gallery.js',
     ) {
     }
 
@@ -23,6 +24,7 @@ final class View
         $section = (string) ($data['section'] ?? '');
         $title = (string) ($data['title'] ?? 'Eufrosina');
         $cssHref = $this->cssHref;
+        $jsHref = $this->jsHref;
 
         extract($data, EXTR_SKIP);
 
