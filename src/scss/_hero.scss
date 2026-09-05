@@ -1,5 +1,18 @@
 @use "mixins" as *;
 
+.hero-figure {
+  margin: 0;
+}
+
+.hero-caption {
+  margin: 0.55rem 0 0;
+  padding: 0 0.15rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
 .hero {
   position: relative;
   display: flex;
@@ -42,9 +55,13 @@
 }
 
 .hero h1 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: -0.015em;
   color: #f3f5f1;
   max-width: 12ch;
-  line-height: 1;
+  line-height: 0.95;
   text-shadow: 0 1px 18px rgb(27 32 28 / 0.35);
 }
 

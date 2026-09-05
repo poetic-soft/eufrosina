@@ -2,7 +2,7 @@
 coleccion: diario
 fuente: diario.html
 imagen: imagen.jpg
-orden: 7
+orden: 20221018
 ---
 
 dia, 18–octubre, 2022

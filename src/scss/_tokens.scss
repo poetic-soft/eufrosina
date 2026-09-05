@@ -1,42 +1,43 @@
 :root {
-  /* Forest + bone. The cream lives in the photographs, not in the chrome. */
-  --bg: #e4e7e1;
-  --paper: #eef0eb;
-  --ink: #1e2420;
-  --accent: #3a5349;
-  --accent-soft: #d5ddd6;
-  --accent-hard: #4c5e57;
-  --muted: #5a635c;
-  --line: #c3cbc4;
+  /* Neutral paper; accent keeps a quiet forest note. */
+  --bg: #f4f4f3;
+  --paper: #ffffff;
+  --ink: #1c1c1b;
+  --accent: #3f524a;
+  --accent-soft: #ebebea;
+  --accent-hard: #4a5a53;
+  --muted: #6a6a66;
+  --line: #d8d8d4;
   --ok: #2d6b4f;
   --ko: #8f3a3a;
-  --white: #f3f5f1;
+  --white: #ffffff;
   --font-serif: "Alegreya", Georgia, "Times New Roman", serif;
+  --font-display: "Cormorant Garamond", "Alegreya", Georgia, "Times New Roman", serif;
   --font-ui: "Alegreya", Georgia, "Times New Roman", serif;
   --font-mono: Consolas, ui-monospace, monospace;
-  --shell-width: 70rem;
-  --measure: 40rem;
+  --shell-width: 68rem;
+  --measure: 42rem;
   --radius: 0;
-  --nav-height: 4.25rem;
+  --nav-height: 3.85rem;
   --z-base: 0;
   --z-nav: 20;
   --z-skip: 40;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --shadow: 0 18px 40px color-mix(in srgb, var(--ink) 10%, transparent);
+  --shadow: 0 18px 40px color-mix(in srgb, var(--ink) 8%, transparent);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1b201c;
-    --paper: #222824;
-    --ink: #e4e7e2;
-    --accent: #8aa898;
-    --accent-soft: #262d28;
-    --muted: #9aa49c;
-    --line: #343c36;
+    --bg: #171716;
+    --paper: #212120;
+    --ink: #ecece9;
+    --accent: #9aada3;
+    --accent-soft: #262625;
+    --muted: #9c9c96;
+    --line: #333331;
     --ok: #7dba96;
     --ko: #d98989;
-    --white: #1b201c;
+    --white: #171716;
     --shadow: 0 18px 40px rgb(0 0 0 / 0.38);
   }
 }

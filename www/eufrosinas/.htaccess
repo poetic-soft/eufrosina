@@ -1,0 +1,5 @@
+Options -Indexes
+
+<FilesMatch "\.(md|php|html?)$">
+    Deny from all
+</FilesMatch>

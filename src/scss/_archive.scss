@@ -1,10 +1,23 @@
 @use "mixins" as *;
 
 .archive-head {
-  margin-bottom: 2.25rem;
+  margin-bottom: 2.75rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--ink);
 
   h1 {
-    font-size: clamp(1.8rem, 3.15vw, 2.48rem);
+    font-size: clamp(2.35rem, 5.8vw, 3.6rem);
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: -0.015em;
+    line-height: 0.98;
+  }
+
+  .lede {
+    margin-top: 0.85rem;
+    margin-bottom: 0;
+    font-style: italic;
   }
 }
 
@@ -23,14 +36,17 @@
 
   h2 {
     margin: 0 0 0.3rem;
-    font-size: 1.15rem;
-    font-weight: 500;
+    font-family: var(--font-display);
+    font-size: 1em;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: -0.005em;
     @include ink-link;
   }
 
   p {
     margin: 0;
-    color: var(--muted);
+    color: var(--ink);
     font-size: 0.92rem;
     line-height: 1.5;
   }
@@ -40,17 +56,27 @@
   display: flex;
   gap: 1.35rem;
   flex-wrap: wrap;
-  margin: 0 0 1.75rem;
-  font-size: 0.92rem;
+  margin: 0 0 2.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 
   a {
-    @include ink-link;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.3s var(--ease);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--ink);
+    }
   }
 
   a[aria-current="page"] {
     color: var(--ink);
-    font-weight: 600;
-    text-decoration-color: var(--ink);
+    font-weight: 500;
   }
 }
 
@@ -72,8 +98,7 @@
     display: block;
     cursor: zoom-in;
     background: var(--paper);
-    box-shadow: var(--shadow);
-    transition: transform 0.35s var(--ease);
+    transition: transform 0.45s var(--ease);
   }
 
   img {
@@ -89,16 +114,19 @@
 }
 
 .cuerpo {
-  font-size: 1.03rem;
-  line-height: 1.85;
+  font-size: 1.05rem;
+  line-height: 1.92;
 
   h1:first-child {
     margin-top: 0;
-    margin-bottom: 0.85em;
-    font-size: clamp(1.53rem, 2.7vw, 1.94rem);
-    font-weight: 500;
+    margin-bottom: 0.95em;
+    font-family: var(--font-display);
+    font-size: clamp(1.95rem, 3.6vw, 2.7rem);
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: -0.015em;
     text-align: left;
-    line-height: 1.15;
+    line-height: 1.05;
   }
 
   em,
@@ -108,16 +136,27 @@
   }
 
   p {
-    margin: 0 0 1.1em;
+    margin: 0 0 1.15em;
   }
 
-  &.version-original p {
-    font-variant-numeric: normal;
+  &.version-original {
+    padding-left: 1.15rem;
+    border-left: 1px solid var(--ink);
+
+    p {
+      font-variant-numeric: normal;
+      line-height: 1.7;
+    }
+  }
+
+  a {
+    @include ink-link;
   }
 }
 
-.frame:has(.cuerpo):not(:has(.pieza-layout)) main {
+.frame:has(.cuerpo):not(:has(.pieza-layout)):not(:has(.literary)) main {
   @media (min-width: 768px) {
-    max-width: min(var(--measure), 42rem);
+    max-width: min(var(--measure), 40rem);
   }
 }
+

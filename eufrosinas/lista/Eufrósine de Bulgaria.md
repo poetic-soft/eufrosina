@@ -1,0 +1,7 @@
+# Eufrósine de Bulgaria
+
+**Eufrósine** (nació como Encona[[1]](https://es.wikipedia.org/wiki/Eufr%C3%B3sine_de_Bulgaria#cite_note-Pavlov-1) o Enconen[[2]](https://es.wikipedia.org/wiki/Eufr%C3%B3sine_de_Bulgaria#cite_note-Cawley-2)) fue una [emperatriz (zarina)](https://es.wikipedia.org/wiki/Anexo:Consortes_de_Bulgaria "Anexo:Consortes de Bulgaria") [búlgara](https://es.wikipedia.org/wiki/B%C3%BAlgara "Búlgara") como primera esposa del emperador [Teodoro Svetoslav](https://es.wikipedia.org/wiki/Teodoro_Svetoslav "Teodoro Svetoslav").
+
+Eufrósine fue la hija de Manuxes[[3]](https://es.wikipedia.org/wiki/Eufr%C3%B3sine_de_Bulgaria#cite_note-ref_duplicada_1-3) (Mankus[[2]](https://es.wikipedia.org/wiki/Eufr%C3%B3sine_de_Bulgaria#cite_note-Cawley-2)), que fue el hijo de Pandoleon - un rico comerciante bizantino de Crimea.[[1]](https://es.wikipedia.org/wiki/Eufr%C3%B3sine_de_Bulgaria#cite_note-Pavlov-1) Nació como Encona[[1]](https://es.wikipedia.org/wiki/Eufr%C3%B3sine_de_Bulgaria#cite_note-Pavlov-1) o Enconen,[[2]](https://es.wikipedia.org/wiki/Eufr%C3%B3sine_de_Bulgaria#cite_note-Cawley-2) más tarde ella pasó a llamarse Eufrósine así por su madrina Eufrósine Paleóloga, quien fue una hija ilegítima del emperador [Miguel VIII Paleólogo](https://es.wikipedia.org/wiki/Miguel_VIII_Pale%C3%B3logo "Miguel VIII Paleólogo"). Se casó con [Teodoro Svetoslav](https://es.wikipedia.org/wiki/Teodoro_Svetoslav "Teodoro Svetoslav") de Bulgaria.
+
+[Eufrósine de Bulgaria - Wikipedia, la enciclopedia libre](https://es.wikipedia.org/wiki/Eufr%C3%B3sine_de_Bulgaria)

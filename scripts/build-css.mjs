@@ -8,9 +8,9 @@ const src = resolve(root, 'src/scss/main.scss');
 const outCss = resolve(root, 'www/assets/css/main.css');
 const outMap = `${outCss}.map`;
 const cssDir = dirname(outCss);
-const fontSrc = resolve(root, 'node_modules/@fontsource/alegreya/files');
 const fontDst = resolve(root, 'www/assets/fonts');
 const fontFiles = [
+  // Alegreya (body)
   'alegreya-latin-ext-400-normal.woff2',
   'alegreya-latin-400-normal.woff2',
   'alegreya-latin-ext-400-italic.woff2',
@@ -19,11 +19,33 @@ const fontFiles = [
   'alegreya-latin-500-normal.woff2',
   'alegreya-latin-ext-700-normal.woff2',
   'alegreya-latin-700-normal.woff2',
+  // Cormorant Garamond Light (titles)
+  'cormorant-garamond-latin-ext-300-italic.woff2',
+  'cormorant-garamond-latin-300-italic.woff2',
+  'cormorant-garamond-latin-ext-300-normal.woff2',
+  'cormorant-garamond-latin-300-normal.woff2',
+];
+
+const fontSources = [
+  resolve(root, 'node_modules/@fontsource/alegreya/files'),
+  resolve(root, 'node_modules/@fontsource/cormorant-garamond/files'),
 ];
 
 mkdirSync(fontDst, { recursive: true });
 for (const file of fontFiles) {
-  copyFileSync(resolve(fontSrc, file), resolve(fontDst, file));
+  const from = fontSources
+    .map((dir) => resolve(dir, file))
+    .find((path) => {
+      try {
+        copyFileSync(path, resolve(fontDst, file));
+        return true;
+      } catch {
+        return false;
+      }
+    });
+  if (!from) {
+    throw new Error(`Fuente no encontrada: ${file}`);
+  }
 }
 
 const result = sass.compile(src, {

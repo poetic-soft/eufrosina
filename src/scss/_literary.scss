@@ -1,0 +1,340 @@
+@use "mixins" as *;
+
+/* Poetry-poster atmosphere for Eufrosinas (and shared literary cues). */
+
+.literary {
+  @include rise;
+  padding-block: 0.5rem 1rem;
+}
+
+.literary-back {
+  margin-bottom: 2.75rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--muted);
+
+  &::before {
+    content: "← ";
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: var(--ink);
+  }
+
+  &--foot {
+    margin-top: 3.5rem;
+    margin-bottom: 0;
+  }
+}
+
+.literary-mast {
+  margin-bottom: 2.75rem;
+}
+
+.literary-kicker {
+  margin: 0 0 1.35rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.literary-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--ink);
+
+  h1 {
+    margin: 0;
+    flex: 1 1 12rem;
+    font-family: var(--font-display);
+    font-size: clamp(2.7rem, 8vw, 4.6rem);
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: -0.02em;
+    line-height: 0.92;
+    color: var(--ink);
+  }
+}
+
+.literary-aside {
+  margin: 0;
+  flex: 0 1 auto;
+  max-width: 14rem;
+  text-align: right;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.literary-lede {
+  margin: 1.35rem 0 0;
+  max-width: 28rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.literary-rule-block {
+  position: relative;
+  margin: 0 0 3.75rem;
+  padding-left: 1.35rem;
+  border-left: 1px solid var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.9;
+
+  h1 {
+    display: none;
+  }
+
+  p {
+    margin: 0 0 1.15em;
+    max-width: 36rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.literary-section-title {
+  margin: 0 0 1.75rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.literary-index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+
+  > li {
+    border-top: 1px solid var(--line);
+
+    &:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+  }
+
+  a {
+    display: grid;
+    grid-template-columns: 2.4rem 4.25rem minmax(0, 1fr);
+    gap: 1rem 1.15rem;
+    align-items: center;
+    padding: 1.15rem 0;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.35s var(--ease), padding-left 0.35s var(--ease);
+
+    &:hover,
+    &:focus-visible {
+      padding-left: 0.35rem;
+    }
+
+    &:hover .literary-index-title,
+    &:focus-visible .literary-index-title {
+      color: var(--accent);
+    }
+  }
+}
+
+.literary-index-num {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.literary-index-thumb {
+  display: block;
+  width: 4.25rem;
+  height: 5.2rem;
+  overflow: hidden;
+  background: var(--paper);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: grayscale(0.35) contrast(1.05);
+    transition: filter 0.45s var(--ease), transform 0.6s var(--ease);
+  }
+
+  a:hover &,
+  a:focus-visible & {
+    img {
+      filter: none;
+      transform: scale(1.03);
+    }
+  }
+}
+
+.literary-index-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.literary-index-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.55rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  transition: color 0.3s var(--ease);
+}
+
+.literary-index-meta {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.literary-spread {
+  display: grid;
+  gap: 2.25rem;
+  align-items: start;
+
+  @media (min-width: 860px) {
+    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+    gap: 3.25rem;
+  }
+
+  &--text {
+    grid-template-columns: 1fr;
+    max-width: 38rem;
+  }
+}
+
+.literary-plate {
+  margin: 0;
+
+  a {
+    display: block;
+    background: var(--paper);
+    transition: transform 0.45s var(--ease);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: grayscale(0.2) contrast(1.04);
+  }
+
+  a:hover,
+  a:focus-visible {
+    transform: translateY(-4px);
+
+    img {
+      filter: none;
+    }
+  }
+}
+
+.literary-body {
+  position: relative;
+  padding-left: 1.35rem;
+  border-left: 1px solid var(--ink);
+  font-size: 1.06rem;
+  line-height: 1.95;
+
+  h1:first-child {
+    display: none;
+  }
+
+  p {
+    margin: 0 0 1.2em;
+    max-width: 34rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Quiet Wikipedia footnote */
+  p:has(> a:only-child),
+  > p:last-child:has(a[href*="wikipedia"]) {
+    margin-top: 2.25rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.86rem;
+    letter-spacing: 0.04em;
+  }
+
+  a {
+    @include ink-link;
+  }
+}
+
+.frame:has(.literary) {
+  main {
+    @media (min-width: 768px) {
+      max-width: min(48rem, 92vw);
+      padding-top: 2.25rem;
+      padding-bottom: 5.5rem;
+    }
+  }
+
+  .site-foot {
+    @media (min-width: 768px) {
+      max-width: min(48rem, 92vw);
+    }
+  }
+}
+
+.frame:has(.literary-spread:not(.literary-spread--text)) {
+  main,
+  .site-foot {
+    @include shell;
+  }
+}
+
+@media (max-width: 639px) {
+  .literary-index a {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.85rem;
+  }
+
+  .literary-index-thumb {
+    display: none;
+  }
+
+  .literary-aside {
+    text-align: left;
+    max-width: none;
+  }
+
+  .literary-title-row h1 {
+    flex-basis: 100%;
+  }
+}

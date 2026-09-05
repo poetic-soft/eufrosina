@@ -2,7 +2,7 @@
 coleccion: diario
 fuente: diario.html
 imagen: imagen.jpg
-orden: 6
+orden: 20220915
 ---
 
 # Torre, 15 de septiembre de 2022

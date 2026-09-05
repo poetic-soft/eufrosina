@@ -1,0 +1,5 @@
+# Eufrosina (esposa de Miquel II)
+
+**Eufrosina**, nascuda l'any [790](https://ca.wikipedia.org/wiki/790 "790") i morta després del [836](https://ca.wikipedia.org/wiki/836 "836"), va ser una emperadriu romana d'Orient, filla de l'[emperador romà d'Orient](https://ca.wikipedia.org/wiki/Emperador_rom%C3%A0_d'Orient "Emperador romà d'Orient") [Constantí VI](https://ca.wikipedia.org/wiki/Constant%C3%AD_VI_el_Cec "Constantí VI el Cec") i de la seva primera esposa, [Maria d'Amnia](https://ca.wikipedia.org/wiki/Maria_d'Amnia "Maria d'Amnia"). Es va casar amb [Miquel II el Tartamut](https://ca.wikipedia.org/wiki/Miquel_el_Tartamut "Miquel el Tartamut"), fundador de la [Dinastia frígia](https://ca.wikipedia.org/wiki/Dinastia_fr%C3%ADgia "Dinastia frígia"). Era la última representant de la [Dinastia isàurica](https://ca.wikipedia.org/wiki/Dinastia_is%C3%A0urica "Dinastia isàurica").
+
+[Eufrosina (esposa de Miquel II) - Viquipèdia, l'enciclopèdia lliure](https://ca.wikipedia.org/wiki/Eufrosina_(esposa_de_Miquel_II))

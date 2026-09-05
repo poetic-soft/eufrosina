@@ -14,6 +14,7 @@
             <a href="/" <?= ($section ?? '') === 'home' ? 'aria-current="page"' : '' ?>>Inicio</a>
             <a href="/escritos" <?= ($section ?? '') === 'escritos' ? 'aria-current="page"' : '' ?>>Escritos</a>
             <a href="/diario" <?= ($section ?? '') === 'diario' ? 'aria-current="page"' : '' ?>>Diario</a>
+            <a href="/eufrosinas" <?= ($section ?? '') === 'eufrosinas' ? 'aria-current="page"' : '' ?>>Eufrosinas</a>
         </div>
     </nav>
     <main id="main-content">

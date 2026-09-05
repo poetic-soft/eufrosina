@@ -2,7 +2,7 @@
 coleccion: diario
 fuente: diario.html
 imagen: imagen.jpg
-orden: 7
+orden: 20221018
 ---
 
 # 18 de octubre de 2022, Torre

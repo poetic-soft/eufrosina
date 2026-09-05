@@ -2,7 +2,7 @@
 coleccion: diario
 fuente: diario.html
 imagen: imagen.jpg
-orden: 9
+orden: 20221121
 ---
 
 # Valladolid, 21 de noviembre de 2022

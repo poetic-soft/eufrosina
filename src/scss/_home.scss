@@ -12,33 +12,42 @@
   display: block;
   text-decoration: none;
   color: inherit;
-  padding-top: 0.2rem;
-  border-top: 1px solid var(--line);
-  transition: transform 0.3s var(--ease);
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--ink);
+  transition: transform 0.35s var(--ease);
 
   strong {
-    @include ink-link;
     display: inline;
-    font-size: 1.31rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-decoration: none;
   }
 
   span {
     display: block;
     color: var(--muted);
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     line-height: 1.45;
   }
 
   .count {
-    font-size: 0.83rem;
-    margin: 0.35rem 0 0.4rem;
+    margin: 0.45rem 0 0.5rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
   }
 
   &:hover,
   &:focus-visible {
     transform: translateY(-2px);
+
+    strong {
+      color: var(--accent);
+    }
   }
 
   &:active {

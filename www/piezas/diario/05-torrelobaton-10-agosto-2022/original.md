@@ -2,7 +2,7 @@
 coleccion: diario
 fuente: diario.html
 imagen: imagen.jpg
-orden: 5
+orden: 20220810
 ---
 
 dia, 10–agosto 2022 Torre

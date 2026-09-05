@@ -107,6 +107,11 @@ final class Markdown
         $escaped = preg_replace('/^##\s+(.+)$/m', '<h2>$1</h2>', $escaped) ?? $escaped;
         $escaped = preg_replace('/^#\s+(.+)$/m', '<h1>$1</h1>', $escaped) ?? $escaped;
         $escaped = preg_replace('/\*\*(.+?)\*\*/s', '<strong>$1</strong>', $escaped) ?? $escaped;
+        $escaped = preg_replace(
+            '/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/',
+            '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>',
+            $escaped
+        ) ?? $escaped;
 
         $blocks = preg_split('/\n{2,}/', trim($escaped)) ?: [];
         $html = '';

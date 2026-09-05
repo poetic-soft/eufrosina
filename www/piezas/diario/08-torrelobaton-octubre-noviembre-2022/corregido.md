@@ -2,7 +2,7 @@
 coleccion: diario
 fuente: diario.html
 imagen: imagen.jpg
-orden: 8
+orden: 20221106
 ---
 
 # Octubre de 2022, Torre

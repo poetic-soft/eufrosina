@@ -2,7 +2,7 @@
 coleccion: diario
 fuente: diario.html
 imagen: imagen.jpg
-orden: 2
+orden: 20220725
 ---
 
 Torrelobatón, 25-2022

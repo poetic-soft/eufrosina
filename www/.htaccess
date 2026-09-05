@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# App routes that share a name with a content directory
+RewriteRule ^eufrosinas(/|$) index.php [L]
+
 # Serve existing files/directories directly
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
